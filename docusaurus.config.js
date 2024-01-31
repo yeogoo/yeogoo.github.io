@@ -52,6 +52,8 @@ const config = {
         blog: {
           routeBasePath : '/blog',
           showReadingTime: true,
+          blogSidebarTitle: '전체 기록',
+          blogSidebarCount: 'ALL',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:

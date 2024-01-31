@@ -1,1 +1,1 @@
-USE_SSH=true yarn deploy
+GIT_USER=yjystyle yarn deploy
