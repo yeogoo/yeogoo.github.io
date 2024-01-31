@@ -32,9 +32,11 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'ko',
-    locales: ['en', 'ko'],
+    locales: ['ko', 'en'],
   },
 
+  deploymentBranch: 'gh-pages',
+  // themes: ['@docusaurus/theme-mermaid'],
   presets: [
     [
       'classic',
@@ -48,12 +50,14 @@ const config = {
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
+          routeBasePath : '/blog',
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
+
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -67,18 +71,20 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
-        logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
-        },
+        title: '여구의 기록 노트',
+        // logo: {
+        //   alt: 'My Site Logo',
+        //   src: 'img/logo.svg',
+        //   href: '/blog',
+        //   // target: '/blog', // By default, this value is calculated based on the `href` attribute (the external link will open in a new tab, all others in the current one).
+        // },
         items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tutorial',
-          },
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'tutorialSidebar',
+          //   position: 'left',
+          //   label: 'Tutorial',
+          // },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/facebook/docusaurus',
@@ -136,6 +142,10 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
+      tableOfContents : {
+        minHeadingLevel: 2,
+        maxHeadingLevel: 5
+      }
     }),
 };
 
