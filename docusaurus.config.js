@@ -8,7 +8,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
+  title: '여구의 기록 노트',
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
@@ -81,6 +81,7 @@ const config = {
         //   // target: '/blog', // By default, this value is calculated based on the `href` attribute (the external link will open in a new tab, all others in the current one).
         // },
         items: [
+          { to: '/docs/books', label: '독후감', position: 'left' },
           // {
           //   type: 'docSidebar',
           //   sidebarId: 'tutorialSidebar',
@@ -150,5 +151,6 @@ const config = {
       }
     }),
 };
+
 
 export default config;
